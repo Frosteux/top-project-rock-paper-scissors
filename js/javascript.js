@@ -38,7 +38,7 @@ function game() {
         game == "Player Wins" ? playerWinCount++ 
         : game == "Computer Wins" ? computerWinCount++
         : game == "Tie" || game == "Not a valid entry." ? "Nobody Wins"
-        : "Unknown";
+        : game == "Unknown";
     };
     return playerWinCount > computerWinCount ? "Player Wins!" 
     : computerWinCount > playerWinCount ? "Computer wins!"
