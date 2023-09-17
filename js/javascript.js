@@ -26,7 +26,25 @@ function compareItems(player,comp) {
     : (player=="paper" && comp=="scissors") ? "Computer Wins"
     : (player=="scissors" && comp=="paper") ? "Player Wins"
     : (player=="scissors" && comp=="rock") ? "Computer Wins"
-    : "Not a valid entry.";
+    : (player!=="rock"||player!=="paper"||paper!=="scissors") ? "Not a valid entry."
+    : "Unknown";
 };
 
-console.log(compareItems(playerSelection(),computerSelection()));
+function game() {
+    let playerWinCount = 0
+    let computerWinCount = 0
+    for (let i =0; i < 5; i++){
+        let game = compareItems(playerSelection(),computerSelection());
+        game == "Player Wins" ? playerWinCount++ 
+        : game == "Computer Wins" ? computerWinCount++
+        : game == "Tie" || game == "Not a valid entry." ? "Nobody Wins"
+        : "Unknown";
+    };
+    return playerWinCount > computerWinCount ? "Player Wins!" 
+    : computerWinCount > playerWinCount ? "Computer wins!"
+    : computerWinCount===playerWinCount ? "Tie!"
+    : "Unknown issue with game.";
+}
+
+console.log(game());
+//console.log(compareItems(playerSelection(),computerSelection()));
