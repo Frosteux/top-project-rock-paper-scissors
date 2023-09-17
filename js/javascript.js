@@ -14,7 +14,7 @@ function playerSelection() {
     return prompt("Rock, Paper, or Scissors?");
 };
 
-function compareItems(player,comp) {
+function compareSelections(player,comp) {
     player=player.toLowerCase();
     comp=comp.toLowerCase();
     console.log(player);
@@ -34,7 +34,7 @@ function game() {
     let playerWinCount = 0
     let computerWinCount = 0
     for (let i =0; i < 5; i++){
-        let game = compareItems(playerSelection(),computerSelection());
+        let game = compareSelections(playerSelection(),computerSelection());
         game == "Player Wins" ? playerWinCount++ 
         : game == "Computer Wins" ? computerWinCount++
         : game == "Tie" || game == "Not a valid entry." ? "Nobody Wins"
@@ -47,4 +47,4 @@ function game() {
 }
 
 console.log(game());
-//console.log(compareItems(playerSelection(),computerSelection()));
+//console.log(compareSelections(playerSelection(),computerSelection()));
