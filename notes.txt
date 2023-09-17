@@ -1,0 +1,5 @@
+User enters Rock, Paper, or Scissors. *case-insensitive
+Function has computer select Rock, Paper, or Scissors.
+Compare User vs Computer selection and announce winner/draw. *return the results, not log.
+Create a function called game that allows 5 consecutive rounds.
+Keep Score, report winner.
